@@ -1,0 +1,157 @@
+/* 1. KHAI BÁO BIẾN MÀU CHỦ ĐẠO (CUTE PINK THEME) */
+:root { 
+  --main-pink: #FF85A1;      /* Hồng đậm cho Header & Chữ chính */
+  --light-pink: #FFE4E9;     /* Hồng nhạt cho nền phụ */
+  --bright-white: #FFFFFF;   /* Trắng tinh khôi cho các Card */
+  --accent-peach: #FFB3C1;   /* Màu đào cho các đường viền/điểm nhấn */
+  --soft-gray: #FFF0F3;      /* Nền toàn trang (hơi ánh hồng) */
+  --text-color: #5C2D35;     /* Màu chữ nâu trầm để hài hòa với hồng */
+}
+
+/* 2. CÀI ĐẶT CHUNG CHO TOÀN TRANG */
+body { 
+  background: var(--soft-gray); 
+  font-family: 'Lexend', 'Inter', sans-serif; /* Font tròn trịa nhìn cute hơn */
+  margin: 0; 
+  color: var(--text-color);
+}
+
+/* 3. PHẦN HEADER (VÙNG TÌM KIẾM CHÍNH) */
+.header-search { 
+  background: var(--main-pink); 
+  padding: 60px 20px; 
+  text-align: center; 
+  /* Đường viền dưới uốn lượn hoặc bo cong nhẹ */
+  border-bottom: 5px solid var(--accent-peach); 
+}
+
+/* 4. LOGO & TIÊU ĐỀ */
+.logo { 
+  color: white; 
+  margin-bottom: 30px; 
+  font-size: 32px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1); /* Đổ bóng nhẹ dạng sticker */
+}
+
+/* 5. KHUNG TÌM KIẾM (SEARCH BOX) */
+.search-box { 
+  background: var(--bright-white); 
+  padding: 30px; 
+  border-radius: 20px; /* Bo góc cực đại cho cảm giác tròn trịa */
+  display: flex; 
+  gap: 15px; 
+  max-width: 950px; 
+  margin: -50px auto 0; /* Đẩy lên trên đè lên Header một chút */
+  box-shadow: 0 10px 40px rgba(255, 133, 161, 0.2); /* Đổ bóng màu hồng */
+}
+
+/* 6. CÁC Ô NHẬP LIỆU (INPUT ITEMS) */
+.input-item { flex: 1; text-align: left; }
+
+.input-item span { 
+  display: block; 
+  font-size: 13px; 
+  font-weight: 700; 
+  color: var(--main-pink); 
+  margin-bottom: 8px; 
+  text-transform: uppercase;
+}
+
+.input-item select, .input-item input { 
+  width: 100%; 
+  border: 2px solid var(--light-pink); /* Viền hồng nhạt */
+  padding: 12px; 
+  border-radius: 12px; 
+  font-size: 15px; 
+  outline: none; 
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Hiệu ứng khi nhấn vào ô nhập */
+.input-item select:focus, .input-item input:focus {
+  border-color: var(--main-pink);
+  box-shadow: 0 0 8px rgba(255, 133, 161, 0.3);
+}
+
+/* 7. NÚT TÌM KIẾM (FIND BUTTON) */
+.btn-find { 
+  background: var(--main-pink); 
+  color: white;
+  border: none; 
+  padding: 0 40px; 
+  border-radius: 15px; 
+  font-weight: 800; 
+  cursor: pointer; 
+  transition: 0.3s ease; 
+}
+
+.btn-find:hover { 
+  background: #FF6688; 
+  transform: scale(1.05); /* Phóng to nhẹ khi di chuột */
+}
+
+/* 8. THẺ CHUYẾN XE (TRIP CARD) */
+.trip-card { 
+  background: white; 
+  border-radius: 18px; 
+  padding: 25px; 
+  /* Thay đường kẻ dọc bằng viền hồng mềm mại */
+  border-left: 8px solid var(--main-pink); 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.03); 
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 133, 161, 0.15);
+}
+
+/* 9. GIÁ TIỀN & NÚT CHỌN GHẾ */
+.price { 
+  color: #FF4D6D; /* Màu hồng đậm/đỏ cho giá tiền */
+  font-size: 24px; 
+  font-weight: 900; 
+}
+
+.btn-seat { 
+  background: var(--accent-peach); 
+  color: white; 
+  border: none; 
+  padding: 12px 25px; 
+  border-radius: 10px; 
+  font-weight: 700;
+  cursor: pointer; 
+  transition: 0.3s;
+}
+
+.btn-seat:hover {
+  background: var(--main-pink);
+}
+/* Đổi màu header lịch sang Hồng */
+.react-datepicker__header {
+  background-color: #FF85A1 !important;
+  border-bottom: none !important;
+}
+
+/* Đổi màu ngày đang chọn sang Xanh VeXeRe hoặc Hồng đậm */
+.react-datepicker__day--selected {
+  background-color: #1455FE !important; 
+  border-radius: 50% !important;
+}
+
+/* Làm cho các ô ngày tròn trịa, cute */
+.react-datepicker__day:hover {
+  background-color: #FFE4E9 !important;
+  border-radius: 50% !important;
+}
+
+/* Chỉnh phông chữ cho giống VeXeRe */
+.react-datepicker {
+  font-family: 'Lexend', sans-serif !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(255, 133, 161, 0.2) !important;
+  border-radius: 15px !important;
+}
